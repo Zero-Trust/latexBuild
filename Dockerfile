@@ -1,7 +1,7 @@
 FROM snoworld/swd-mklatex:latest
 
 COPY \
-entypoint.sh \
+entrypoint.sh \
 .latexmkrc \
 Makefile \
 main.tex \
