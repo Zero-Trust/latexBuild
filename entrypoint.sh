@@ -6,8 +6,7 @@ args=${3}
 #make_setu_up.sh
 
 # make install
-apt install -y build-essential
-
+apt install -y build-essential && \
 make && make clean
 
 
