@@ -5,5 +5,5 @@ entrypoint.sh \
 .latexmkrc \
 Makefile \
   /
-RUN ["chmod", "+x", "/entypoint.sh"]
+RUN ["chmod", "+x", "/entrypoint.sh"]
 ENTRYPOINT ["/entypoint.sh"]
