@@ -7,7 +7,7 @@ inputs:
   compiler:
     default: latexmk
   args:
-    default: "-pdf -file-line-error -halt-on-error -interaction=nonstopmode"
+    default: "-cd -r ./.latexmkrc -f -gg"
 
 runs:
   using: docker
