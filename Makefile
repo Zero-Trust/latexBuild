@@ -31,4 +31,3 @@ clean:
 clean-all: 
   rm -f $(RM_LIST)
   $(LATEXMK) -C $(TARGETS)
-
