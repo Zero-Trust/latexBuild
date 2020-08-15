@@ -5,11 +5,10 @@ compiler=${2}
 args=${3}
 #make_setu_up.sh
 
-apt update && apt install -y --no-install-recommends build-essential
+apt update && apt install -y build-essential
 echo "**************"
+pwd
 ls -lh .
 echo "**************"
 
 make && make clean
-
-
