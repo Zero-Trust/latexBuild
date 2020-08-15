@@ -7,5 +7,5 @@ FROM snoworld/swd-mklatex:latest
 #   /
 COPY ./* /github/workspace/
 
-RUN ["chmod", "+x", "/entrypoint.sh"]
-ENTRYPOINT ["/entrypoint.sh"]
+RUN ["chmod", "+x", "/github/workspance/entrypoint.sh"]
+ENTRYPOINT ["/github/workspance/entrypoint.sh"]
