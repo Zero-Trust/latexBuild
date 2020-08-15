@@ -6,6 +6,10 @@ args=${3}
 #make_setu_up.sh
 
 apt update && apt install -y build-essential
+echo "**************"
+ls -lh .
+echo "**************"
+
 make && make clean
 
 
