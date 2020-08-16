@@ -16,6 +16,11 @@ apt update && apt install -y build-essential
 
 cp -f /.latexmkrc ./
 setupMakefile
+
+echo "++++++++++ Makefile +++++++++++++"
+cst Makefile
+echo "++++++++++ Makefile +++++++++++++"
+
 cp -f /Makefile   ./
 
 
