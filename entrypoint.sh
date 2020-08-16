@@ -1,11 +1,15 @@
 #!/bin/bash
 
+echo "+++++++++"
+echo ${1}
+echo "+++++++++"
+
 files="${1}"
 compiler=${2}
 args=${3}
-function setupMakefile() {
 
-for file in "${files[@]}"
+function setupMakefile() {
+    for file in "${files[@]}"
     do
       target_basename="${file%.*}"
       echo ${target_basename}
@@ -17,6 +21,11 @@ for file in "${files[@]}"
 #make_setu_up.sh
 
 apt update && apt install -y build-essential
+
+cp -f /.latexmkrc ./
+cp -f /Makefile   ./
+setupMakefile
+
 echo "**************"
 echo "/"
 ls -lh /
@@ -24,17 +33,6 @@ echo "**************"
 pwd
 ls -lh .
 echo "**************"
-
-cp -f /.latexmkrc ./
-cp -f /Makefile   ./
-echo "${files[@]}"
-
-setupMakefile
-
-echo "--------------"
-pwd
-ls
-echo "--------------"
 
 #make && make clean
 
