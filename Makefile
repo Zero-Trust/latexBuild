@@ -17,17 +17,17 @@ LATEXMK_OPT := -cd -r ./.latexmkrc -f -gg
 all: $(TARGETS)
 
 main.pdf: main.tex
-  $(LATEXMK) $(LATEXMK_OPT) $<
+	$(LATEXMK) $(LATEXMK_OPT) $<
 
 appendix.pdf: appx/appendix.tex
-  $(LATEXMK) $(LATEXMK_OPT) $<
+	$(LATEXMK) $(LATEXMK_OPT) $<
 
 .PHONY: clean
 clean: 
-  rm -f $(RM_LIST)
-  $(LATEXMK) -c $(TARGETS)
+	rm -f $(RM_LIST)
+	$(LATEXMK) -c $(TARGETS)
 
 .PHONY: clean-all
 clean-all: 
-  rm -f $(RM_LIST)
-  $(LATEXMK) -C $(TARGETS)
+	rm -f $(RM_LIST)
+	$(LATEXMK) -C $(TARGETS)
