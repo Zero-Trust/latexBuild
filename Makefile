@@ -5,8 +5,8 @@
 # Copyright (c) 2020 冬ノ夜空
 # 
 
-TARGETS := template.pdf
-# TARGETS = template.pdf appendix.pdf
+# TARGETS := template.pdf
+TARGETS = template.pdf appendix.pdf
 RM_LIST :=  *.listing *.dvi *.txt *.synctex.gz
 
 LATEXMK := latexmk 
