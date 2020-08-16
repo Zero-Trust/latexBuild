@@ -7,10 +7,11 @@ FROM snoworld/swd-mklatex:latest
 #   /
 WORKDIR /github/workspace
 
-COPY ["entrypoint.sh", ".latexmkrc", "Makefile", "./"]
+COPY [".latexmkrc", "Makefile", "./"]
+COPY ["entrypoint.sh", "/"]
 
-RUN ["chmod", "+x", "./entrypoint.sh"]
+RUN ["chmod", "+x", "/entrypoint.sh"]
 
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
 
 
