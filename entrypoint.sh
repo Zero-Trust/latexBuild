@@ -7,8 +7,8 @@ args="${3}"
 
 function setupMakefile() {
     target_basename="${file%.*}"
-    sed -i -e "s@template.pdf@${target_basename}.tex@g" ./Makefile
-    sed -i -e "s@template.tex@${target_basename}.tex@g" ./Makefile
+    sed -i -e "s@template.pdf@${target_basename}.tex@g" /Makefile
+    sed -i -e "s@template.tex@${target_basename}.tex@g" /Makefile
 }
 
 # install make command
@@ -18,7 +18,7 @@ cp -f /.latexmkrc ./
 setupMakefile
 
 echo "++++++++++ Makefile +++++++++++++"
-cat Makefile
+cat /Makefile
 echo "++++++++++ Makefile +++++++++++++"
 
 cp -f /Makefile   ./
