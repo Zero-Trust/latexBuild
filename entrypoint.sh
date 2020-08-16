@@ -1,6 +1,6 @@
 #!/bin/bash
 
-files=${1}
+files="${1}"
 compiler=${2}
 args=${3}
 function setupMakefile() {
@@ -27,6 +27,8 @@ echo "**************"
 
 cp -f /.latexmkrc ./
 cp -f /Makefile   ./
+echo "${files[@]}"
+
 setupMakefile
 
 echo "--------------"
