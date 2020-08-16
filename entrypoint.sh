@@ -7,6 +7,9 @@ args=${3}
 
 apt update && apt install -y build-essential
 echo "**************"
+echo "/"
+ls -lh /
+echo "**************"
 pwd
 ls -lh .
 echo "**************"
