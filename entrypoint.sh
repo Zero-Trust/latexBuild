@@ -18,7 +18,7 @@ cp -f /.latexmkrc ./
 setupMakefile
 
 echo "++++++++++ Makefile +++++++++++++"
-cst Makefile
+cat Makefile
 echo "++++++++++ Makefile +++++++++++++"
 
 cp -f /Makefile   ./
