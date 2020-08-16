@@ -5,9 +5,9 @@ FROM snoworld/swd-mklatex:latest
 # .latexmkrc \
 # Makefile \
 #   /
-COPY ["entrypoint.sh", ".latexmkrc", "Makefile", "./"]
+COPY ["entrypoint.sh", ".latexmkrc", "Makefile", "/"]
 
 
 
-RUN ["chmod", "+x", "./entrypoint.sh"]
-ENTRYPOINT ["./entrypoint.sh"]
+RUN ["chmod", "+x", "/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
