@@ -15,8 +15,9 @@ function setupMakefile() {
 apt update && apt install -y build-essential
 
 cp -f /.latexmkrc ./
-cp -f /Makefile   ./
 setupMakefile
+cp -f /Makefile   ./
+
 
 echo "**************"
 echo "/"
