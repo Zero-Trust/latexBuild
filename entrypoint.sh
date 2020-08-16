@@ -14,4 +14,14 @@ pwd
 ls -lh .
 echo "**************"
 
+cp -f /.latexmkrc ./
+cp -f /Makefile   ./
+
+echo "--------------"
+pwd
+ls
+echo "--------------"
+
 make && make clean
+
+
