@@ -5,7 +5,7 @@
 # Copyright (c) 2020 冬ノ夜空
 # 
 
-TARGETS := main.pdf
+TARGETS := template.pdf
 # TARGETS = template.pdf appendix.pdf
 RM_LIST :=  *.listing *.dvi *.txt *.synctex.gz
 
@@ -16,7 +16,7 @@ LATEXMK_OPT := -cd -r ./.latexmkrc -f -gg
 .PHONY: all
 all: $(TARGETS)
 
-main.pdf: main.tex
+template.pdf: template.tex
 	$(LATEXMK) $(LATEXMK_OPT) $<
 
 appendix.pdf: appx/appendix.tex
