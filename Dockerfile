@@ -5,10 +5,12 @@ FROM snoworld/swd-mklatex:latest
 # .latexmkrc \
 # Makefile \
 #   /
-COPY ["entrypoint.sh", ".latexmkrc", "Makefile", "/github/workspace/"]
+WORKDIR /github/workspace
+
+COPY ["entrypoint.sh", ".latexmkrc", "Makefile", "./"]
 
 RUN ["chmod", "+x", "./entrypoint.sh"]
 
-ENTRYPOINT ["bash", "-c", "/github/workspace/","./entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
 
 
