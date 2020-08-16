@@ -1,25 +1,17 @@
 #!/bin/bash
 
-echo "+++++++++"
-echo ${1}
-echo "+++++++++"
-
-files="${1}"
-compiler=${2}
-args=${3}
+# files="${1}"
+file="${1}"
+compiler="${2}"
+args="${3}"
 
 function setupMakefile() {
-    for file in "${files[@]}"
-    do
-      target_basename="${file%.*}"
-      echo ${target_basename}
-      #sed -i -e "s@template.pdf@${target_basename}.tex@" ./Makefile
-      #sed -i -e "s@template.tex@${target_basename}.tex@" ./Makefile
-    done
+    target_basename="${file%.*}"
+    sed -i -e "s@template.pdf@${target_basename}.tex@" ./Makefile
+    sed -i -e "s@template.tex@${target_basename}.tex@" ./Makefile
 }
 
-#make_setu_up.sh
-
+# install make command
 apt update && apt install -y build-essential
 
 cp -f /.latexmkrc ./
@@ -34,6 +26,6 @@ pwd
 ls -lh .
 echo "**************"
 
-#make && make clean
+make && make clean
 
 
