@@ -13,7 +13,7 @@ runs:
   using: docker
   image: Dockerfile
   args:
-    - ${{ inputs.element_files }}
+    - ${{ inputs.root_file }}
     - ${{ inputs.compiler }}
     - ${{ inputs.args }}
     
