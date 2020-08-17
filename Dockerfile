@@ -11,7 +11,6 @@ FROM thomasweise/docker-texlive-full:latest
 # COPY ["entrypoint.sh", "/"]
 
 COPY [".latexmkrc", "Makefile", "entrypoint.sh", "/"]
-COPY [".latexmkrc", "Makefile", "entrypoint.sh", "find_expand.sh", "/"]
 
 # WORKDIR /github/workspace
 
