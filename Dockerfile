@@ -1,4 +1,5 @@
-FROM snoworld/swd-mklatex:latest
+# FROM snoworld/swd-mklatex:latest
+FROM thomasweise/docker-texlive-full:latest
 
 # COPY \
 # entrypoint.sh \
