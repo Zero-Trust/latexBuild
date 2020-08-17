@@ -1,7 +1,7 @@
 name: Github Action for LaTeX
 
 inputs:
-  element_files:
+  root_file:
     required: true
   # working_directory:
   compiler:
