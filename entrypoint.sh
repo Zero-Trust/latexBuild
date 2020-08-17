@@ -11,6 +11,10 @@ function setupMakefile() {
     sed -i -e "s@template.tex@${target_basename}.tex@g" /Makefile
 }
 
+# find_expand.sh
+bash find_expand.sh ${file}
+
+
 # install make command
 apt update && apt install -y build-essential
 
