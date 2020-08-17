@@ -15,7 +15,6 @@ COPY [".latexmkrc", "Makefile", "entrypoint.sh", "/"]
 # WORKDIR /github/workspace
 
 RUN ["chmod", "+x", "/entrypoint.sh"]
-RUN ["chmod", "+x", "/find_expand.sh"]
 
 ENTRYPOINT ["/entrypoint.sh"]
 
