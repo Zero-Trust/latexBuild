@@ -11,8 +11,14 @@ function setupMakefile() {
     sed -i -e "s@template.tex@${target_basename}.tex@g" /Makefile
 }
 
-# find_expand.sh
-bash find_expand.sh ${file}
+# ----------------------
+# [ find_expand.sh ]
+target_filename=${1}
+PARENTDIR=$(dirname $(find . -name ${target_filename}))
+mv ${PARENTDIR}/* ./
+# cp -Rf ${PARENTDIR}/* ./
+# rm -rf ${PARENTDIR}
+# ----------------------
 
 
 # install make command
