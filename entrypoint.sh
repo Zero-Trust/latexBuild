@@ -16,7 +16,7 @@ function setupMakefile() {
 target_filename=${1}
 echo "${target_filename}"
 echo $(find . -name ${target_filename})
-PARENTDIR=$(dirname $(cd $(find . -name ${target_filename}) && pwd))
+PARENTDIR=$(cd $(dirname $(find . -name ${target_filename})) && pwd)
 if[ "${PARENTDIR}" != "/" ]; then
   mv ${PARENTDIR}/* ./
 fi
