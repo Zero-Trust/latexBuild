@@ -13,13 +13,13 @@ function setupMakefile() {
 
 # ----------------------
 # [ find_expand.sh ]
-set -x
 target_filename=${1}
 echo "${target_filename}"
 echo $(find . -name ${target_filename})
-PARENTDIR=$(dirname $(find . -name ${target_filename}))
-set +x
-# mv ${PARENTDIR}/* ./
+PARENTDIR=$(dirname $(cd $(find . -name ${target_filename}) && pwd))
+if[ "${PARENTDIR}" != "/" ]; then
+  mv ${PARENTDIR}/* ./
+fi
 # ----------------------
 # cp -Rf ${PARENTDIR}/* ./
 # rm -rf ${PARENTDIR}
