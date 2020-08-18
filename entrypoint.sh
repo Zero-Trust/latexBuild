@@ -17,7 +17,7 @@ target_filename=${1}
 echo "${target_filename}"
 echo $(find . -name ${target_filename})
 PARENTDIR=$(cd $(dirname $(find . -name ${target_filename})) && pwd)
-if[ "${PARENTDIR}" != "/" ]; then
+if [ "${PARENTDIR}" != "/" ]; then
   mv ${PARENTDIR}/* ./
 fi
 # ----------------------
