@@ -49,8 +49,14 @@ echo "**************"
 
 # Initialize
 make clean-all | true
+echo "%%%%%%% before build %%%%%%%"
+ls -lha .
+echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
 # Build
 make && make clean
+echo "%%%%%%% after  build %%%%%%%"
+ls -lha .
+echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
 
 echo ">>>>>>>>>>>>>>>>>>"
 ls -la 
