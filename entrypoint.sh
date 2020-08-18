@@ -48,7 +48,8 @@ ls -lh .
 echo "**************"
 
 # Initialize
-make clean-all | true
+# make clean-all | true
+make clean-all
 echo "%%%%%%% before build %%%%%%%"
 ls -lha .
 echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
