@@ -47,6 +47,9 @@ pwd
 ls -lh .
 echo "**************"
 
+# Initialize
+make clean-all | true
+# Build
 make && make clean
 
 echo ">>>>>>>>>>>>>>>>>>"
